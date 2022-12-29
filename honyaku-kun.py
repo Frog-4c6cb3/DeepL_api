@@ -54,12 +54,12 @@ def delete():
     target_text_entry.delete(1.0, tk.END)
 
 
-def leftClick_1(event):
+def left_click_1(event):
     source_text_entry.delete(1.0, tk.END)
     source_text_entry.insert(1.0, clip())
 
 
-def leftClick_2(event):
+def left_click_2(event):
     text = target_text_entry.get(1.0, "end")
     pyperclip.copy(text)
 
@@ -85,12 +85,12 @@ frame4 = ttk.Frame(root)
 source_text_entry = tk.Text(
     frame1, height=10, width=80, relief="ridge", bd=3,)
 
-source_text_entry.bind('<Button-3>', leftClick_1)
+source_text_entry.bind('<Button-3>', left_click_1)
 
 target_text_entry = tk.Text(
     frame3, height=10, width=80, relief="ridge", bd=3,)
 
-target_text_entry.bind('<Button-3>', leftClick_2)
+target_text_entry.bind('<Button-3>', left_click_2)
 
 # ボタンwidgetを設定
 

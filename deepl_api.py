@@ -59,8 +59,8 @@ def translate(source_text, target_langage, split_sentences):
         result = request.json()
         elapsed_time = time.time()-start_time
         target_text = result["translations"][0]["text"]
-        csv_log(source_text, target_text, target_langage,
-                round(elapsed_time, 5))
+        # csv_log(source_text, target_text, target_langage,
+        #         round(elapsed_time, 5))
     except requests.exceptions.RequestException as e:
         target_text = "Error:" + str(e)
 
